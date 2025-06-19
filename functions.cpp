@@ -1,5 +1,6 @@
 #include "functions.h"
 
+//Linear Search: returns index of found vale or -1
 int searchArray(int *arr, int size, int value)
 {
     for (int i = 0; i < size; i++)
@@ -11,7 +12,7 @@ int searchArray(int *arr, int size, int value)
     }
     return -1;
 };
-
+// Update array at given index, return old and new values
 UpdateResult updateArray(int *arr, int size, int index, int value)
 {
     if (index < 0 || index >= size)
@@ -25,7 +26,7 @@ UpdateResult updateArray(int *arr, int size, int index, int value)
     result.newValue = arr[index];
     return result;
 }
-
+// Add a new element to the end of array
 int *addToEnd(int *arr, int size, int value)
 {
     int *arr2 = new int[size + 1];
@@ -39,6 +40,7 @@ int *addToEnd(int *arr, int size, int value)
     return arr2;
 }
 
+//Delete an element at a specified index
 int *deleteAtIndex(int *arr, int size, int index)
 {
     int *arr2 = new int[size - 1];
@@ -55,6 +57,7 @@ int *deleteAtIndex(int *arr, int size, int index)
     return arr2;
 }
 
+// Show menu and get user selection
 string displayMenu()
 {
 

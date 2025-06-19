@@ -5,18 +5,21 @@ using namespace std;
 
 int main()
 {
+    // Open file and read initial array values
     ifstream inFile("A1input.txt");
 
     int size = 100;
     int *arr1 = new int[size];
     int value, i = 0;
 
+    // Load integers into array
     while (inFile >> value)
     {
         arr1[i] = value;
         i++;
     }
 
+    // User interaction loop
     while (true)
     {
         string userChoice = displayMenu();
